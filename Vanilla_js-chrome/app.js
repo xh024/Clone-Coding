@@ -1,37 +1,40 @@
-// function
-// function에 argument 여러개 설정 가능
-function sayHello(nameOfPerson, age) {
-  console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
-}
+// return
+// alret, console 사용하지 않으려면 return 사용
 
-sayHello("nico", 10);
-sayHello("dal", 23);
-sayHello("lynn", 21);
-
-
-
-// 계산기 만들기
-function plus(firstNunmber, secondNumber) {
-  console.log(firstNunmber + secondNumber);
-}
-function divide(firstNumber, secondNumber) {
-  console.log(firstNumber / secondNumber);
-}
-
-plus(80, 2);
-divide(98, 20);
-
-
-
-// object와 function 결합
-const player = {
-  name: "jeongho",
-  sayHello: function(otherPersonName) {
-    console.log("hello! " + otherPersonName + " nice to meet you");
+// 예제 1
+const calculator = {
+  plus: function(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
+  },
+  minus: function(firstNumber, secondNumber) {
+    return firstNumber - secondNumber;
+  },
+  times: function(firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
+  },
+  divide: function(firstNumber, secondNumber) {
+    return firstNumber / secondNumber;
+  },
+  power: function(firstNumber, secondNumber) {
+    return firstNumber ** secondNumber;
   }
 }
 
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("nico");
-player.sayHello("dal");
+const plusResult = calculator.plus(2, 3); // 5
+const minusResult = calculator.minus(plusResult, 10); // -5
+const timesResult = calculator.times(10, minusResult); // -50
+const divideResult = calculator.divide(timesResult, plusResult); // -10
+const powerResult = calculator.power(divideResult, minusResult); // -10^5
+
+
+
+// 예제 2
+const age = 96;
+function calculatorKrAge(ageOfForeigner) {
+  ageOfForeigner + 2;
+  return "hello";
+}
+
+const krAge = calculatorKrAge(age);
+
+console.log(krAge);
