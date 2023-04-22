@@ -1,6 +1,10 @@
-// boolean
-// true(켜져있음), flase(꺼져있음), null(값이 없음), undefined(variable이 정의되어 있지만, 값이 정해지지 않음)
-const amIFat = null;
-let something;
+// arrays
+const dayOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 
-console.log(something, amIFat);
+// Get Item from Array
+console.log(dayOfWeek[4]);
+
+// Add on emore day to the array
+dayOfWeek.push("sun");
+
+console.log(dayOfWeek);
